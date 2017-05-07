@@ -10,6 +10,7 @@ celery==4.0.2
 certifi==2017.4.17
 click==6.7
 docutils==0.13.1
+eventpipe-python-client==0.1.0
 Flask==0.12.1
 Flask-Failsafe==0.2
 Flask-Script==2.0.5

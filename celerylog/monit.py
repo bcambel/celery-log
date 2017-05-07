@@ -6,8 +6,10 @@ import json
 import threading
 import os
 import sys
+from plugins.kinesis import send1 as send_to_kinesis, pipe as kinesis_firehose
+from plugins.event_pipe import send as send_to_pipe
+from plugins.disk import send as send_to_disk
 
-sys.path.insert(0, '/home/bahadir/code/event-pipe-client-py/')
 
 fapp = Flask(__name__)
 r = requests.Session()
@@ -23,9 +25,7 @@ def task(tid):
 def me():
     return jsonify(events)
 
-from plugins.kinesis import send1 as send_to_kinesis, pipe as kinesis_firehose
-from plugins.event_pipe import send as send_to_pipe
-from plugins.disk import send as send_to_disk
+
 
 firehose = kinesis_firehose()
 
@@ -103,7 +103,7 @@ def my_monitor(app):
 def startup():
 
     redis_broker='redis://localhost:6379/0'
-    fapp.debug=False
+
     fapp.config['CELERY_BROKER_URL'] = redis_broker
     fapp.config['CELERY_RESULT_BACKEND'] = fapp.config['CELERY_BROKER_URL']
     app = Celery('app', broker=fapp.config['CELERY_BROKER_URL'])

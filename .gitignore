@@ -1,2 +1,29 @@
-*.py[oc]
 *.log
+
+*.py[ocd]
+
+# C extensions
+*.so
+
+*.local.cfg
+newrelic.ini
+
+# Packages
+*.egg
+*.egg-info
+dist
+build
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+venv
+.idea
+logs
+# Installer logs
+pip-log.txt
