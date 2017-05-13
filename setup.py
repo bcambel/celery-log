@@ -24,7 +24,7 @@ setup(
     extra_requires=[
         'eventpipe-python-client',
         'boto',
-    ]
+    ],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
