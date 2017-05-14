@@ -1,6 +1,6 @@
 *.log
-
-*.py[ocd]
+*.py[oc]
+*/*.py[oc]
 
 # C extensions
 *.so
