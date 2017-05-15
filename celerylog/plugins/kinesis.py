@@ -10,10 +10,14 @@ AWS_KEY = os.environ.get("AWS_KEY", '')
 AWS_SECRET = os.environ.get("AWS_SECRET", '')
 AWS_FIREHOSE_STREAM = os.environ.get("AWS_FIREHOSE_STREAM", '')
 
-client = boto3.client('firehose',
+try: # pragma: no cover
+    client = boto3.client('firehose',
                       region_name=AWS_REGION,
                       aws_secret_access_key=AWS_SECRET,
                       aws_access_key_id=AWS_KEY)
+except:
+    client = None
+
 counter = 0
 MAX_RECORDS = 500
 

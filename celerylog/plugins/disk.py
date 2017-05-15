@@ -6,7 +6,7 @@ from datetime import datetime
 idx = None
 
 def pipe(fi='workfile.log', batch=1000):
-    f = open(fi, 'w')
+    f = open(fi, 'a')
 
     def sender(data):
         sender.idx += 1
