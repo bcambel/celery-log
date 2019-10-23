@@ -17,7 +17,7 @@ setup(
     install_requires=[
         'celery>=4.0.2',
         'requests>=2.13.0',
-        'Flask==0.12.1',
+        'Flask==1.0',
         'Flask-Failsafe==0.2',
         'Flask-Script==2.0.5',
     ],
