@@ -14,7 +14,7 @@ eventpipe-python-client==0.1.0
 Flask==0.12.1
 Flask-Failsafe==0.2
 Flask-Script==2.0.5
-flower==0.9.1
+flower==1.2.0
 futures==3.1.1
 itsdangerous==0.24
 Jinja2==2.9.6
